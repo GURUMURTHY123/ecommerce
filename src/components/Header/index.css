@@ -1,0 +1,36 @@
+/* write your css code */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  align-items: center;
+  padding: 10px;
+  height:10vh;
+}
+
+.header-container-heading {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.cart-data-container {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.cart-icon {
+  color: black;
+  margin-right: 18px;
+}
+
+.cart-count {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
