@@ -1,21 +1,21 @@
 import {Component} from 'react'
 import './App.css'
+import {FaGreaterThan} from 'react-icons/fa'
 import Header from './components/Header'
 import CategoryPanel from './components/CategoryPanel'
 import SpecificProductDetails from './components/SpecificProductDetails'
-import {FaGreaterThan} from 'react-icons/fa'
 
 class App extends Component {
   state = {productsData: [], cartCount: 0}
+
+  componentDidMount() {
+    this.getProductsdata()
+  }
 
   updateCartCount = () => {
     this.setState(prevState => ({
       cartCount: prevState.cartCount + 1,
     }))
-  }
-
-  componentDidMount() {
-    this.getProductsdata()
   }
 
   getProductsdata = async () => {
@@ -41,7 +41,6 @@ class App extends Component {
               <CategoryPanel productName={eachProduct.name} />
             ))}
           </div>
-          <div className="scroll-container"></div>
           <div className="products-details-container">
             {productsData.map(eachProduct => (
               <>
